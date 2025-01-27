@@ -1,0 +1,92 @@
+body {
+    padding: 1%;
+    display: flex;
+    background-color: rgb(214, 237, 195);
+}
+
+#purchaseSection {
+    display: block;
+    padding-right: 1%;
+}
+
+#gameDetails {
+}
+
+#balanceSection {
+    padding-right: 1%;
+    display: flex;
+}
+
+#daySection {
+    display: flex;
+}
+
+.gridSquare {
+    background-color: white;
+    border: 2px solid gray;
+    width: 150px;
+    height: 150px;
+    display: block;
+    text-align: center;
+}
+
+.purchaseButton {
+    background-color: black;
+    color: white;
+    padding: 0.8em;
+    border-radius: 10%;
+}
+
+.purchaseButton:hover {
+    background-color: gray;
+    border-color: blue;
+}
+
+.ownedNum {
+    font-size: 0.8em;
+}
+
+.bulkBuy {
+    padding-top: 15%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.bulkBuyButton {
+    font-size: 0.9em;
+    border-radius: 0px;
+    border-width: 1px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    border-color: white;
+}
+
+.bulkBuyButtonActive {
+    font-size: 0.9em;
+    border-radius: 0px;
+    border-width: 1px;
+    background-color: rgb(0, 58, 106);
+    color: white;
+    border-color: white;
+}
+
+#lemonadeStandPchables {
+    display: flex;
+}
+
+#nextDay {
+    background-color: rgb(1, 184, 1);
+    color: white;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 2px solid green;
+    height: 100px;
+}
+
+#nextDay:hover {
+    background-color: rgb(199, 255, 199);
+    border-color: rgb(0, 189, 0);
+    color: black;
+}

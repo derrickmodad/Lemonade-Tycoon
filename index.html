@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory</title>
+    <link rel="stylesheet" href="styleReset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <script>
+        //captures player input for optional way of purchasing upgrades
+        window.addEventListener("keydown", (event) => {
+            switch (event.key) {
+                case '1':
+                    purchaseButtonClicked(1);
+                    break;
+                case '2':
+                    purchaseButtonClicked(2);
+                    break;
+                case '3': 
+                    purchaseButtonClicked(3);
+                    break;
+                case '4':
+                    purchaseButtonClicked(4);
+                    break;
+                case "Enter":
+                    nextDay();
+                    break;
+            }
+        })
+    </script>
+</head>
+<body>
+    <div id="purchaseSection">
+
+        <div id="lemonade">
+            <h2>Lemonade Stand</h2>
+            <div id="lemonadeStandPchables">
+                <div class="purchaseOption">
+                    <p>Lemons</p>
+                    <div class="gridSquare">
+                        <p id="lemonsPrice">$0.50</p>
+                        <button class="purchaseButton" onclick="purchaseButtonClicked(1)">buy</button>
+                        <p class="ownedNum">Owned: <p class="ownedNum" id="amountOwned1">0</p></p>
+                        <div class="bulkBuy">
+                            <button class="bulkBuyButtonActive" id="lemons1xButton" onclick="bulkBuyButtonClicked(1, 1)">1x</button>
+                            <button class="bulkBuyButton" id="lemons5xButton" onclick="bulkBuyButtonClicked(1, 5)">5x</button>
+                            <button class="bulkBuyButton" id="lemons10xButton" onclick="bulkBuyButtonClicked(1, 10)">10x</button>
+                            <!-- <button class="bulkBuyButton">max</button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="purchaseOption">
+                    <p>Sugar Packs</p>
+                    <div class="gridSquare">
+                        <p id="sugarPrice">$5</p>
+                        <button id="sugarPurchase" class="purchaseButton" onclick="purchaseButtonClicked(2)">buy</button>
+                        <p class="ownedNum">Owned: <p class="ownedNum" id="amountOwned2">0</p></p>
+                        <div class="bulkBuy">
+                            <button class="bulkBuyButtonActive" id="sugar1xButton" onclick="bulkBuyButtonClicked(2, 1)">1x</button>
+                            <button class="bulkBuyButton" id="sugar5xButton" onclick="bulkBuyButtonClicked(2, 5)">5x</button>
+                            <button class="bulkBuyButton" id="sugar10xButton" onclick="bulkBuyButtonClicked(2, 10)">10x</button>
+                            <!-- <button class="bulkBuyButton">max</button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="purchaseOption">
+                    <p>Ice</p>
+                    <div class="gridSquare">
+                        <p id="icePrice">$1</p>
+                        <button class="purchaseButton" onclick="purchaseButtonClicked(3)">buy</button>
+                        <p class="ownedNum">Owned: <p class="ownedNum" id="amountOwned3">0</p></p>
+                        <div class="bulkBuy">
+                            <button class="bulkBuyButtonActive" id="ice1xButton" onclick="bulkBuyButtonClicked(3, 1)">1x</button>
+                            <button class="bulkBuyButton" id="ice5xButton" onclick="bulkBuyButtonClicked(3, 5)">5x</button>
+                            <button class="bulkBuyButton" id="ice10xButton" onclick="bulkBuyButtonClicked(3, 10)">10x</button>
+                            <!-- <button class="bulkBuyButton">max</button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="purchaseOption">
+                    <p>Stands</p>
+                    <div class="gridSquare">
+                        <p id="standPrice">$50</p>
+                        <button class="purchaseButton" onclick="purchaseButtonClicked(4)">buy</button>
+                        <p class="ownedNum">Owned: <p class="ownedNum" id="amountOwned4">1</p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="gameDetails">
+        <div id="balanceSection">
+            <p id="balance">Balance: 
+                <p id="balanceAmount">10</p>
+            </p>
+        </div>
+        <div id="daySection">
+            <p id="day">Day:
+                <p id="dayNumber">1</p>
+            </p>
+        </div>
+        <button id="nextDay" onclick="nextDay()">Next Day</button>
+    </div>    
+
+</body>
+</html>
