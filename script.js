@@ -88,7 +88,7 @@ function updateBalance(change) {
         return false; //insufficient funds
     } else {
         balanceNum += change;
-        balanceElement.innerHTML = balanceNum;
+        balanceElement.innerHTML = balanceNum.toFixed(2);
         return true;
     }
 }
