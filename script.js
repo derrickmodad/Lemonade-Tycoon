@@ -181,8 +181,3 @@ function nextDay() {
     }
     document.getElementById("dayNumber").innerHTML++;
 }
-
-//100 ice cubes / dollar
-//20 sugar packs / 5 dollars (4 / dollar)
-//1 stand for 50 dollars, can expand infinitely
-//in the future, will have to refactor to accomodate other businesses
